@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditTableTblCell" id="KGk-i7-Jjw" customClass="EditTableTblCell" customModule="MyEntry" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9x-l7-TY2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXl-uI-7xf" userLabel="indexlbl">
+                                <rect key="frame" x="99" y="10" width="10.333333333333329" height="22"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFv-UF-moq" userLabel="nameBtn">
+                                <rect key="frame" x="133.33333333333337" y="12" width="183.66666666666663" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="q4i-gw-mvi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Johnathan Edison" image="circle.fill" catalog="system">
+                                    <color key="titleColor" name="Gray1"/>
+                                </state>
+                                <connections>
+                                    <action selector="onEditClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qPW-sA-Vbr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UFv-UF-moq" firstAttribute="leading" secondItem="NXl-uI-7xf" secondAttribute="trailing" constant="24" id="ATF-dN-p87"/>
+                            <constraint firstItem="NXl-uI-7xf" firstAttribute="top" secondItem="g9x-l7-TY2" secondAttribute="top" constant="10" id="Nh1-er-06v"/>
+                            <constraint firstItem="UFv-UF-moq" firstAttribute="centerY" secondItem="NXl-uI-7xf" secondAttribute="centerY" id="Zwn-O8-BYJ"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UFv-UF-moq" secondAttribute="trailing" constant="8" id="wOr-5y-qdt"/>
+                            <constraint firstItem="NXl-uI-7xf" firstAttribute="leading" secondItem="g9x-l7-TY2" secondAttribute="leading" constant="99" id="xkl-OQ-Dky"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="g9x-l7-TY2" secondAttribute="trailing" id="3lf-2y-Cjz"/>
+                    <constraint firstAttribute="bottom" secondItem="g9x-l7-TY2" secondAttribute="bottom" id="jXr-oe-xhc"/>
+                    <constraint firstItem="g9x-l7-TY2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nDK-rY-Ft1"/>
+                    <constraint firstItem="g9x-l7-TY2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xOX-LH-HiU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnName" destination="UFv-UF-moq" id="bQj-ZP-xvN"/>
+                <outlet property="lblIndex" destination="NXl-uI-7xf" id="Hlh-ME-OMb"/>
+            </connections>
+            <point key="canvasLocation" x="176.80000000000001" y="64.285714285714292"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="Gray1">
+            <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

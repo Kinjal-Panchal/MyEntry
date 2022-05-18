@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2320" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Bq7-VU-zzZ" userLabel="Card View" customClass="CustomCardView" customModule="Anamules" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="182"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U0W-rx-Bho" userLabel="Background view" customClass="CornerRoundingView" customModule="SwiftMessages">
+                    <rect key="frame" x="20" y="44" width="560" height="104"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" text="How many tocos would you like?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPw-yt-2RC">
+                            <rect key="frame" x="10" y="30" width="430" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <bool key="isElement" value="NO"/>
+                            </accessibility>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                            <color key="textColor" red="0.4039215686" green="0.36862745099999999" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgc-pr-Wy3">
+                            <rect key="frame" x="450" y="30" width="100" height="44"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TeJ-LT-Uew" customClass="NVActivityIndicatorView" customModule="Anamules" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="5GJ-8o-P5i"/>
+                                <constraint firstItem="TeJ-LT-Uew" firstAttribute="leading" secondItem="zgc-pr-Wy3" secondAttribute="leading" id="EYz-8c-7nT"/>
+                                <constraint firstAttribute="trailing" secondItem="TeJ-LT-Uew" secondAttribute="trailing" id="dnw-9U-r5L"/>
+                                <constraint firstAttribute="height" constant="44" id="rPv-Zm-mMq"/>
+                                <constraint firstItem="TeJ-LT-Uew" firstAttribute="top" secondItem="zgc-pr-Wy3" secondAttribute="top" id="rgi-ew-NNp"/>
+                                <constraint firstAttribute="bottom" secondItem="TeJ-LT-Uew" secondAttribute="bottom" id="wnw-B3-Wxd"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="TPw-yt-2RC" secondAttribute="bottom" constant="30" id="06N-qE-X4U"/>
+                        <constraint firstAttribute="trailing" secondItem="zgc-pr-Wy3" secondAttribute="trailing" constant="10" id="DQS-SU-aVW"/>
+                        <constraint firstItem="TPw-yt-2RC" firstAttribute="leading" secondItem="U0W-rx-Bho" secondAttribute="leading" constant="10" id="KP5-QV-naA"/>
+                        <constraint firstItem="zgc-pr-Wy3" firstAttribute="leading" secondItem="TPw-yt-2RC" secondAttribute="trailing" constant="10" id="OCd-jJ-QN3"/>
+                        <constraint firstItem="TPw-yt-2RC" firstAttribute="top" secondItem="U0W-rx-Bho" secondAttribute="top" constant="30" id="ccQ-Ml-6UE"/>
+                        <constraint firstItem="zgc-pr-Wy3" firstAttribute="centerY" secondItem="U0W-rx-Bho" secondAttribute="centerY" id="ttK-z4-oVc"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailingMargin" secondItem="U0W-rx-Bho" secondAttribute="trailing" id="M5V-Zq-GdZ"/>
+                <constraint firstAttribute="bottomMargin" secondItem="U0W-rx-Bho" secondAttribute="bottom" id="WKA-8x-qvq"/>
+                <constraint firstItem="U0W-rx-Bho" firstAttribute="leading" secondItem="Bq7-VU-zzZ" secondAttribute="leadingMargin" id="Yqn-BI-phI"/>
+                <constraint firstItem="U0W-rx-Bho" firstAttribute="top" secondItem="Bq7-VU-zzZ" secondAttribute="topMargin" id="qqj-Sl-jfD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="bounceAnimationOffset">
+                    <real key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="topLayoutMarginAddition">
+                    <real key="value" value="20"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="leftLayoutMarginAddition">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="bottomLayoutMarginAddition">
+                    <real key="value" value="20"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="rightLayoutMarginAddition">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="collapseLayoutMarginAdditions" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="indicatorView" destination="TeJ-LT-Uew" id="iUC-Uo-qP8"/>
+                <outlet property="indicatorViewContainer" destination="zgc-pr-Wy3" id="ofE-tw-QdK"/>
+                <outlet property="lblBodyLabel" destination="TPw-yt-2RC" id="Rld-j6-mM2"/>
+            </connections>
+            <point key="canvasLocation" x="305.79710144927537" y="581.91964285714278"/>
+        </view>
+    </objects>
+</document>

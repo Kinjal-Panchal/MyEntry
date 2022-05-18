@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="117" id="KGk-i7-Jjw">
+            <rect key="frame" x="0.0" y="0.0" width="442" height="117"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="442" height="117"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5W0-kF-C3J">
+                        <rect key="frame" x="0.0" y="0.0" width="442" height="117"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-Temp" translatesAutoresizingMaskIntoConstraints="NO" id="KXz-eO-929">
+                                <rect key="frame" x="15" y="10" width="97" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KXz-eO-929" secondAttribute="height" multiplier="1:1" id="HrL-tm-tcq"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VwI-zP-evK">
+                                <rect key="frame" x="132" y="38" width="290" height="41"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Johnathan Edison" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUs-ag-hj5" customClass="ThemTitleLabel" customModule="MyEntry" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ThemeBtnTitleLabel" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="j.e@tooploox.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nq2-AO-9zg" customClass="ThemTitleLabel" customModule="MyEntry" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="20.5" width="290" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRegular" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="ThemeBtnTitleLabel" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSize" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="size">
+                                                <real key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="KXz-eO-929" secondAttribute="bottom" constant="10" id="0ca-Q6-Aoy"/>
+                            <constraint firstItem="VwI-zP-evK" firstAttribute="leading" secondItem="KXz-eO-929" secondAttribute="trailing" constant="20" id="FUR-bD-oG2"/>
+                            <constraint firstItem="KXz-eO-929" firstAttribute="top" secondItem="5W0-kF-C3J" secondAttribute="top" constant="10" id="NjH-FE-Bjg"/>
+                            <constraint firstItem="KXz-eO-929" firstAttribute="centerY" secondItem="5W0-kF-C3J" secondAttribute="centerY" id="RtE-1K-y6b"/>
+                            <constraint firstItem="KXz-eO-929" firstAttribute="leading" secondItem="5W0-kF-C3J" secondAttribute="leading" constant="15" id="SyS-qz-iYW"/>
+                            <constraint firstAttribute="trailing" secondItem="VwI-zP-evK" secondAttribute="trailing" constant="20" id="TTH-vS-a2t"/>
+                            <constraint firstItem="VwI-zP-evK" firstAttribute="centerY" secondItem="5W0-kF-C3J" secondAttribute="centerY" id="lWt-Kc-MH1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="5W0-kF-C3J" secondAttribute="bottom" id="6zR-wD-1IT"/>
+                    <constraint firstAttribute="trailing" secondItem="5W0-kF-C3J" secondAttribute="trailing" id="eVa-uR-Z9V"/>
+                    <constraint firstItem="5W0-kF-C3J" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gG1-GQ-31f"/>
+                    <constraint firstItem="5W0-kF-C3J" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xFi-if-cfi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="194.20289855072465" y="88.058035714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic-Temp" width="40" height="40"/>
+    </resources>
+</document>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeaderEventCell" customModule="MyEntry" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="647" height="158"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNU-Df-fzf">
+                    <rect key="frame" x="0.0" y="0.0" width="647" height="158"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="July" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmj-Ym-0Ie" customClass="ThemTitleLabel" customModule="MyEntry" customModuleProvider="target">
+                            <rect key="frame" x="42" y="69.5" width="29.5" height="19.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="ThemeBtnTitleLabel" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="size">
+                                    <real key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSize" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSemibold" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FI-OP-StH" customClass="ThemTitleLabel" customModule="MyEntry" customModuleProvider="target">
+                            <rect key="frame" x="73.5" y="68.5" width="20.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.90980392160000001" green="0.31372549020000001" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="Colour">
+                                    <color key="value" red="0.90980392160000001" green="0.31372549020000001" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSemibold" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSize" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="size">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9GD-oX-tKc" customClass="DashedLineView" customModule="MyEntry" customModuleProvider="target">
+                            <rect key="frame" x="124" y="78.5" width="496" height="1"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="mnz-1K-VmQ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Qmj-Ym-0Ie" firstAttribute="centerY" secondItem="TNU-Df-fzf" secondAttribute="centerY" id="Iqk-0Z-cwK"/>
+                        <constraint firstAttribute="trailing" secondItem="9GD-oX-tKc" secondAttribute="trailing" constant="27" id="K84-9Z-DVo"/>
+                        <constraint firstItem="9FI-OP-StH" firstAttribute="leading" secondItem="Qmj-Ym-0Ie" secondAttribute="trailing" constant="2" id="RAV-cF-xVm"/>
+                        <constraint firstItem="9FI-OP-StH" firstAttribute="centerY" secondItem="Qmj-Ym-0Ie" secondAttribute="centerY" id="V2r-dS-Z9K"/>
+                        <constraint firstItem="9GD-oX-tKc" firstAttribute="centerY" secondItem="9FI-OP-StH" secondAttribute="centerY" id="Yay-CL-e9d"/>
+                        <constraint firstItem="Qmj-Ym-0Ie" firstAttribute="leading" secondItem="TNU-Df-fzf" secondAttribute="leading" constant="42" id="cDq-0R-zUR"/>
+                        <constraint firstItem="9GD-oX-tKc" firstAttribute="leading" secondItem="9FI-OP-StH" secondAttribute="trailing" constant="30" id="zJR-im-b4C"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="TNU-Df-fzf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Fah-fq-yMx"/>
+                <constraint firstItem="TNU-Df-fzf" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="VBf-8O-Zp9"/>
+                <constraint firstItem="TNU-Df-fzf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mLh-OS-87f"/>
+                <constraint firstAttribute="bottom" secondItem="TNU-Df-fzf" secondAttribute="bottom" id="pKC-lg-xxM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lblDate" destination="9FI-OP-StH" id="uYp-C6-71M"/>
+                <outlet property="lblMonth" destination="Qmj-Ym-0Ie" id="eeF-5l-AYL"/>
+            </connections>
+            <point key="canvasLocation" x="171.73913043478262" y="-169.41964285714286"/>
+        </view>
+    </objects>
+</document>
