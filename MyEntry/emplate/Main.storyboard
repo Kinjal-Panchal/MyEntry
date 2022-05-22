@@ -4029,6 +4029,7 @@ Conditions</string>
                     <navigationItem key="navigationItem" id="2hI-Bj-CFK"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="ContainerViewTop" destination="Ukt-xq-SF4" id="CU2-Oy-hmF"/>
                         <outlet property="EventListView" destination="eNE-Qs-85K" id="j5b-Ix-Xd1"/>
                         <outlet property="btnDrafts" destination="ZlB-Gm-QVl" id="Gtg-NO-dIU"/>
                         <outlet property="btnUpComing" destination="Tad-1f-iTh" id="Se3-ix-tWA"/>
@@ -5927,10 +5928,10 @@ Conditions</string>
                                                                             <rect key="frame" x="20" y="97" width="149" height="137"/>
                                                                             <subviews>
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTc-9f-JL6">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="149" height="38"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="149" height="50"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Unlimited guests" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ej-ow-Qya" customClass="ThemTitleLabel" customModule="MyEntry" customModuleProvider="target">
-                                                                                            <rect key="frame" x="25" y="0.0" width="114" height="38"/>
+                                                                                            <rect key="frame" x="25" y="0.0" width="114" height="50"/>
                                                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                                             <nil key="textColor"/>
                                                                                             <nil key="highlightedColor"/>
@@ -5942,7 +5943,7 @@ Conditions</string>
                                                                                             </userDefinedRuntimeAttributes>
                                                                                         </label>
                                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tick" translatesAutoresizingMaskIntoConstraints="NO" id="eiM-8D-fI7">
-                                                                                            <rect key="frame" x="0.0" y="11.5" width="15" height="15"/>
+                                                                                            <rect key="frame" x="0.0" y="17.5" width="15" height="15"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" constant="15" id="YPI-Ig-DwB"/>
                                                                                                 <constraint firstAttribute="height" constant="15" id="k2x-qa-nBC"/>
@@ -5960,10 +5961,10 @@ Conditions</string>
                                                                                     </constraints>
                                                                                 </view>
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pmi-2n-YC8">
-                                                                                    <rect key="frame" x="0.0" y="48" width="149" height="50"/>
+                                                                                    <rect key="frame" x="0.0" y="60" width="149" height="17"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="3 check-in devices" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jX3-1c-IwM" customClass="ThemTitleLabel" customModule="MyEntry" customModuleProvider="target">
-                                                                                            <rect key="frame" x="25" y="0.0" width="114" height="50"/>
+                                                                                            <rect key="frame" x="25" y="0.0" width="114" height="17"/>
                                                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                                             <nil key="textColor"/>
                                                                                             <nil key="highlightedColor"/>
@@ -5975,7 +5976,7 @@ Conditions</string>
                                                                                             </userDefinedRuntimeAttributes>
                                                                                         </label>
                                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tick" translatesAutoresizingMaskIntoConstraints="NO" id="gdb-A8-5Mo">
-                                                                                            <rect key="frame" x="0.0" y="17.5" width="15" height="15"/>
+                                                                                            <rect key="frame" x="0.0" y="1" width="15" height="15"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="height" constant="15" id="9Nt-Vi-GfU"/>
                                                                                                 <constraint firstAttribute="width" constant="15" id="Lio-zt-7Mi"/>
@@ -5993,10 +5994,10 @@ Conditions</string>
                                                                                     </constraints>
                                                                                 </view>
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRm-5Y-4Cg">
-                                                                                    <rect key="frame" x="0.0" y="108" width="149" height="29"/>
+                                                                                    <rect key="frame" x="0.0" y="87" width="149" height="50"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8x-vI-ZpF" customClass="ThemTitleLabel" customModule="MyEntry" customModuleProvider="target">
-                                                                                            <rect key="frame" x="25" y="0.0" width="114" height="29"/>
+                                                                                            <rect key="frame" x="25" y="0.0" width="114" height="50"/>
                                                                                             <string key="text">Max 2 events in
 package</string>
                                                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -6010,7 +6011,7 @@ package</string>
                                                                                             </userDefinedRuntimeAttributes>
                                                                                         </label>
                                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tick" translatesAutoresizingMaskIntoConstraints="NO" id="LT8-ff-N5s">
-                                                                                            <rect key="frame" x="0.0" y="7" width="15" height="15"/>
+                                                                                            <rect key="frame" x="0.0" y="17.5" width="15" height="15"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="height" constant="15" id="Oww-pc-MYE"/>
                                                                                                 <constraint firstAttribute="width" constant="15" id="iSH-K6-bSn"/>

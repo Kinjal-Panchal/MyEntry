@@ -101,10 +101,12 @@ class SignUpWithPhoneVC: UIViewController {
                 self.registerModel.username = self.txtUserName.text
                 self.registerModel.password = self.txtPassword.text
                 self.registerModel.mobile_number = self.txtPhoneNumber.text
+                self.registerModel.phone_code = viewcountryPicker.selectedCountry.phoneCode
                 AlertMessage.showMessageForSuccess(response?.otp ?? "")
                 let otpVC : OTPVC = OTPVC.instantiate(appStoryboard: .Auth)
                 otpVC.StringOTP = response?.otp ?? ""
                 otpVC.registerReqModel = registerModel
+                otpVC.mobilenumber = viewcountryPicker.selectedCountry.phoneCode + (self.txtPhoneNumber.text ?? "")
                 self.navigationController?.pushViewController(otpVC, animated: true)
 
             }

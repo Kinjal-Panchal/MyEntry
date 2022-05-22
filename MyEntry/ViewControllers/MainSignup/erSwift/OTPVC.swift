@@ -29,9 +29,11 @@ class OTPVC: UIViewController , OTPTextFieldDelegate{
     var isFromEmail = false
     var timer:Timer!
     var totalSecond = 60
+    var mobilenumber = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         startTimer()
         if registerReqModel != nil && isFromEmail == false{
             let letters  = registerReqModel.mobile_number?.map({String($0)})
@@ -46,6 +48,9 @@ class OTPVC: UIViewController , OTPTextFieldDelegate{
                     str.append("X")
                 }
             }
+            
+//            let strNo = str.joined(separator: "")
+//            lblTitle.text = "Please enter one time password which was sent to \(mobilenumber)\(strNo)"
             let strNo = str.joined(separator: "")
             lblTitle.text = "Please enter one time password which was sent to \(registerReqModel.phone_code ?? "")\(strNo)"
         

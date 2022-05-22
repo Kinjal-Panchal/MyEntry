@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SideMenuSwift
 import SDWebImage
 
 class MyEventVC: UIViewController {
@@ -18,12 +19,14 @@ class MyEventVC: UIViewController {
     @IBOutlet weak var btnUpComing: UIButton!
     @IBOutlet weak var btnDrafts: UIButton!
     
+    @IBOutlet weak var ContainerViewTop: NSLayoutConstraint!
     
     //MARK:- ==== View Controller Life cycle =====
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name(NotificationKeys.kuserProfileKey.rawValue), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(displayProfile), name: Notification.Name(NotificationKeys.kuserProfileKey.rawValue), object: nil)
+        
          dataSetup()
       }
     
@@ -37,6 +40,19 @@ class MyEventVC: UIViewController {
         }
         btnSelected(SelectedBtn: btnUpComing, UnSelected: btnDrafts)
         scrollview.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+        manageUpcommingandDraftEvent()
+    }
+    
+    func manageUpcommingandDraftEvent() {
+        let sidemenuVC = (Appdel.window?.rootViewController?.children.first as! SideMenuController)
+        if let navVC = sidemenuVC.children.first as? UINavigationController {
+            print(navVC.children)
+            let upcommingVC : UpComingEventVC = (navVC.children.first as! MyEventVC).children.first as! UpComingEventVC
+            btnUpComing.isHidden =  (upcommingVC.arrUpComingEvent.count == 0)
+            btnDrafts.isHidden = (upcommingVC.arrDraftEventList.count == 0)
+//            let draftEventListVC: DraftEventListVC = (navVC.children.first as! MyEventVC).children.first as! DraftEventListVC
+//            btnDrafts.isHidden = (draftEventListVC.arrEventList.count == 0)
+        }
     }
     
     @objc func displayProfile(){

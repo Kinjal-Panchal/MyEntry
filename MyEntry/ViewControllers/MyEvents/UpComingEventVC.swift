@@ -42,6 +42,7 @@ class UpComingEventVC: UIViewController {
     //MARK:- ===== Variables ====
     var arrEventList = [EventData]()
     var arrUpComingEvent = [RootUpcomingEventData]()
+    var arrDraftEventList = [EventData]()
     
     //MARK: - ===== View Controller Life Cycle ===
     override func viewDidLoad() {
@@ -49,12 +50,14 @@ class UpComingEventVC: UIViewController {
         tblEvents.register(UINib(nibName: "HeaderEventCell", bundle: nil), forHeaderFooterViewReuseIdentifier: "HeaderEventCell")
           webserviceCallUserEventList()
           webserviceCallUpComingEventList()
+        webserviceCallDraftEventList()
     }
     
     @IBAction func btnActionAddEvent(_ sender: UIButton) {
         let createEventVC = CreateEventVC.instantiate(appStoryboard: .main)
         self.navigationController?.pushViewController(createEventVC, animated: true)
     }
+    
 }
 
 //MARK: - ===== CollectionView DataSource and Delegate =====
@@ -171,6 +174,29 @@ extension UpComingEventVC {
           }
         }
     
+    //MARK:- ===== WebService Call Event List ====
+    func webserviceCallDraftEventList(){
+        LoaderClass.showActivityIndicator()
+        let reqModel = EventListReqModel()
+        reqModel.user_id = "\(Singleton.sharedInstance.UserProfilData?.id ?? 0)"
+        reqModel.type = "draft"
+        
+        WebServiceSubClass.EventListType(eventReqModel: reqModel) { status, message, response, error in
+            LoaderClass.hideActivityIndicator()
+            if status {
+                print(response)
+//                    self.arrDraftEventList = response?.data
+                if response?.data?.count != 0 {
+                    guard let events = response?.data else { return }
+                    self.arrDraftEventList = events
+                }
+            }
+            else {
+                
+            }
+          }
+        }
+    
     //MARK: - ===== WebService Call Event List ====
     func webserviceCallUpComingEventList(){
         LoaderClass.showActivityIndicator()
@@ -200,6 +226,7 @@ extension UpComingEventVC {
                 
             }
         }
+        
         
         
 //        WebServiceSubClass.EventListType(eventReqModel: reqModel) { status, message, response, error in

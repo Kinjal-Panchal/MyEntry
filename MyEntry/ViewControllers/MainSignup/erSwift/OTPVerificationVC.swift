@@ -31,4 +31,8 @@ class OTPVerificationVC: UIViewController {
         let welcomeVC = WelComeVC.instantiate(appStoryboard: .Auth)
         self.navigationController?.pushViewController(welcomeVC, animated: true)
     }
+    
+    @IBAction func btnActionBack(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
